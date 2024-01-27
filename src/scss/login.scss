@@ -1,0 +1,84 @@
+.login-container {
+    .login-bg-wrapper {
+        .login-bg-image {
+            height: 100dvh;
+            width: 100dvw;
+            object-fit: cover;
+            filter: brightness(0.5);
+        }
+    }
+    .login-form-container {
+        position: absolute;
+        top: 50%;
+        background-color: rgba(0,0,0,.75);
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 4px;
+        padding: 50px 75px;
+        width: 35%;
+        .login-form-text {
+            font-size: 32px;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 24px;
+        }
+        .login-form-input-container {
+            position: relative;
+            .toggle-password {
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%,-100%);
+                right: -8px;
+                font-size: 12px;
+                cursor: pointer;
+            }
+
+        .login-form-input {
+            width: 100%;
+            padding: 14px 10px;
+            background: #333;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .login-form-input:focus-within {
+            outline: none !important;
+            background-color: #565656 !important;
+        }
+    }
+    .login-form-btn {
+        width: 100%;
+        background: #e50914;
+        padding: 12px;
+        color: #fff;
+        border-radius: 4px;
+        font-weight: 600;
+    }
+
+    .login-form-checkbox-container {
+        color: #b3b3b3;
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        margin-top: 14px;
+        .login-form-checkbox {
+            display: flex;
+            align-items: center;
+        }
+        .login-form-remember-text {
+            margin-left: 8px;
+        }
+        .login-form-help-text:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    }
+}
+@media (max-width: 1023px) {
+    .login-form-container {
+    padding: 50px 45px !important;
+    width: 80% !important;
+    }
+}
