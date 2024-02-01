@@ -24,11 +24,12 @@
         }
         .login-form-input-container {
             position: relative;
+            margin-bottom: 20px;
             .toggle-password {
                 color: #fff;
                 position: absolute;
                 top: 50%;
-                transform: translate(-50%,-100%);
+                transform: translate(-50%,-50%);
                 right: -8px;
                 font-size: 12px;
                 cursor: pointer;
@@ -39,7 +40,6 @@
             padding: 14px 10px;
             background: #333;
             border-radius: 4px;
-            margin-bottom: 20px;
             color: #fff;
         }
         .login-form-input:focus-within {
@@ -72,7 +72,7 @@
         .login-form-remember-text {
             margin-left: 8px;
         }
-        .login-form-help-text:hover {
+        .login-form-help-text {
             text-decoration: underline;
             cursor: pointer;
         }

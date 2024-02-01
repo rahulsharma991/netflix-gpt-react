@@ -1,0 +1,15 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+        "no-duplicate-imports": "error",
+        "prefer-arrow-callback": "error",
+        "no-unused-vars": "error",
+        "no-undef": "error"
+    }
+  }
+  
