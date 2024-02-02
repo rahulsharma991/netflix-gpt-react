@@ -8,7 +8,7 @@ export default class FormValidatorModel {
         if(formDataKeys && formDataKeys.length) {
             for(let key in formData) {
                 const formValues =  formData[key].current.value
-                if((formData.email.current.value && !isEmailValid) && key == 'email') {
+                if((formData.email.current.value && !isEmailValid) && key === 'email') {
                     validationErrors[key] = `Please enter valid email`;
                 }
                 if(!formValues) {
