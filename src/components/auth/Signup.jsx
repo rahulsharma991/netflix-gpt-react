@@ -1,4 +1,4 @@
-import Header from "../Header";
+import Header from "../shared/Header";
 import '../../scss/auth/login.scss';
 import {useNavigate} from 'react-router-dom';
 import { useRef, useState } from "react";
@@ -12,6 +12,7 @@ const Signup = () => {
     const [errorMessage, setErrorMessage] = useState({});
     const [togglePassword,setTogglePassword] = useState(false);
     const [inputType, setInputType] = useState('password');
+    const authModel = new AuthModel();
     const formData = {
         name,
         email,
@@ -20,16 +21,15 @@ const Signup = () => {
     function signInHandler() {
         return navigate('/login');
     }
-    function signUpHandler() {
+     function signUpHandler() {
         const message =  FormValidatorModel.validator(formData);
-        console.log(message)
+      
         if(Object.keys(message).length) {
             setErrorMessage(message);
             return true;
         }
         setErrorMessage({});
-        console.log('no error')
-             AuthModel.authHandler(formData);
+         authModel.authHandler(formData,'signup',navigate)
     }
     function togglePasswordHandler() {
         setTogglePassword(!togglePassword);

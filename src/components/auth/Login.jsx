@@ -1,9 +1,10 @@
-import Header from "../Header";
+import Header from "../shared/Header";
 import '../../scss/auth/login.scss';
 import {useNavigate} from 'react-router-dom';
 import { useState, useRef } from "react";
 import AuthModel from '../../models/auth.ts';
 import FormValidatorModel from '../../models/formValidator.ts';
+import Loader from '../shared/Loader.jsx';
 const Login = () => {
     const navigate = useNavigate();
     const email = useRef(null);
@@ -15,29 +16,30 @@ const Login = () => {
     const [inputType, setInputType] = useState('password');
     const [togglePassword,setTogglePassword] = useState(false);
     const [errorMessage, setErrorMessage] = useState({});
-
+    const authModel = new AuthModel();
     function signupHandler() {
         return navigate('/signup');
     }
-    function togglePasswordHandler() {
+     function togglePasswordHandler() {
         setTogglePassword(!togglePassword);
         const result = togglePassword? setInputType('password'): setInputType('text')
         return result;
     }
-    function signInHandler() {
+     function signInHandler() {
         const message =  FormValidatorModel.validator(formData);
         if(Object.keys(message).length) {
             setErrorMessage(message);
             return true;
         }
         setErrorMessage({});
-        console.log('no error')
-             AuthModel.authHandler(formData);
+        authModel.authHandler(formData, 'signin', navigate);
+       
     }
     return (
 
         <div className="login-container">
             <Header />
+            {/* <Loader /> */}
             <div className="login-bg-wrapper">
             <img src='/assets/netflix-login-bg.jpeg'
             alt='Netflix Login background' className="login-bg-image" />
