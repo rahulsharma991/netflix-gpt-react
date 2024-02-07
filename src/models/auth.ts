@@ -14,7 +14,7 @@ export default class AuthModel {
     private createUser(formData:FormDataInterface, navigate:Function) {
      createUserWithEmailAndPassword(auth, formData.email.current.value, formData.password.current.value).then((userCredential) => {
         const user =  userCredential.user;
-        navigate('/browse');
+        // navigate('/browse');
       })
       .catch((error) => {
         toast.error(error.message, {
@@ -26,7 +26,7 @@ export default class AuthModel {
     private loginUser(formData:FormDataInterface,navigate:Function) {
         signInWithEmailAndPassword(auth, formData.email.current.value, formData.password.current.value).then((userCredential) => {
              const user = userCredential.user;
-             navigate('/browse');
+            //  navigate('/browse');
                 })
                 .catch((error) => {
                     toast.error(error.message, {
