@@ -4,7 +4,6 @@ import {useNavigate} from 'react-router-dom';
 import { useState, useRef } from "react";
 import AuthModel from '../../models/auth.ts';
 import FormValidatorModel from '../../models/formValidator.ts';
-import Loader from '../shared/Loader.jsx';
 const Login = () => {
     const navigate = useNavigate();
     const email = useRef(null);
@@ -39,7 +38,6 @@ const Login = () => {
 
         <div className="login-container">
             <Header />
-            {/* <Loader /> */}
             <div className="login-bg-wrapper">
             <img src='/assets/netflix-login-bg.jpeg'
             alt='Netflix Login background' className="login-bg-image" />

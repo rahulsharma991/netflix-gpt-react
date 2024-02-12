@@ -1,0 +1,41 @@
+.video-title-container {
+    height: 70dvh;
+    height: 70vh;
+    width: 100dvw;
+    width: 100vw;
+    background-color: red;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    .video-title {
+        font-size: 1.7rem;
+    }
+    .video-description {
+        width: 30%;
+        font-size: 1.1rem;
+        padding: 14px 0px;
+    }
+    .video-action-btn-container {
+
+        .video-play-btn {
+            width: 90px;
+            height: 40px;
+            background:#fff;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+        .video-more-info-btn {
+            width: 120px;
+            height: 40px;
+            background: #6b6a6a52;
+            border-radius: 4px;
+            font-size: 18px;
+            color: #000;
+            margin-left: 12px;
+        }
+    }
+}

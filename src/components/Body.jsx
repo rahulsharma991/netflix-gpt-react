@@ -3,8 +3,6 @@ import { appRoute } from "../routes/appRoute";
 
 import 'react-toastify/dist/ReactToastify.css';
 
- 
-
 const Body = () => {
 
     return (
