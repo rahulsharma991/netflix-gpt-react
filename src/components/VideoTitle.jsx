@@ -2,7 +2,6 @@ import React from 'react';
 import '../scss/videoTitle.scss';
 
 const VideoTitle = ({title,description}) => {
-    console.log(title,description)
   return (
     <div className='video-title-container'>
         <h4 className='video-title'>{title}</h4>
